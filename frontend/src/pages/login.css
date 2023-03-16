@@ -1,0 +1,56 @@
+.group {
+    @apply relative;
+  }
+  .form {
+    @apply flex justify-center items-center flex-col border bg-[black] relative pt-[60px] pb-[90px] px-10 py-[120px] rounded-[20px] border-solid border-[white];
+    display: -webkit-box;
+    display: -ms-flexbox;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+  }
+  .form p {
+    @apply text-2xl font-[bold] tracking-[0.5px] text-[white] pb-5;
+  }
+  .container-1 {
+    @apply pt-[30px];
+  }
+  .main-input {
+    @apply text-base block w-[185px] text-white pl-[5px] pr-2.5 py-2.5 border-b-[#6c6c6c] border-[none] border-b border-solid focus:border-b-[#42ff1c];
+    background: transparent;
+  }
+  .main-input:focus {
+    outline: none;
+  }
+  .lebal-email {
+    @apply text-[#999999] text-lg font-[normal] absolute pointer-events-none transition-[0.2s] duration-[ease] ease-[all] left-[5px] top-2.5;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+  }
+  .main-input:focus ~ .lebal-email,
+  .main-input:valid ~ .lebal-email {
+    @apply text-sm text-[#42ff1c] -top-5;
+  }
+  .highlight-span {
+    @apply absolute h-3/5 w-0 pointer-events-none opacity-50 left-0 top-1/4;
+  }
+  .main-input:focus ~ .highlight-span {
+    @apply animate-[input-focus_0.3s_ease];
+    -webkit-animation: input-focus 0.3s ease;
+  }
+  @keyframes input-focus {
+    from {
+      background: #42ff1c;
+    }
+    to {
+      @apply w-[185px];
+    }
+  }
+  .submit {
+    @apply mt-[1.2rem] px-5 py-2.5 rounded-[10px];
+  }
+  
